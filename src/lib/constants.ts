@@ -17,6 +17,7 @@ export const GITHUB_REPO_URL = "https://github.com/henrynkoh/seattle-llm-wiki-bo
 export const NAV = [
   { href: "/", label: "Overview" },
   { href: "/curriculum", label: "7-Day Curriculum" },
+  { href: "/discovery", label: "Discovery & Synthesis" },
   { href: "/graphify", label: "Graphify Track" },
   { href: "/logistics", label: "Logistics & Prep" },
   { href: "/facilitators", label: "Facilitator Runbook" },

@@ -27,6 +27,14 @@ export default function CurriculumPage() {
             </Link>
             . When a day references timestamps, treat them as orientation—not rigid law—because edits and translations can shift timing.
           </p>
+          <p className="mt-4">
+            <span className="font-semibold">Parallel track: </span>
+            For executable steps on messy <code className="rounded bg-emerald-100/80 px-1 font-mono text-emerald-950 dark:bg-emerald-900/50 dark:text-emerald-50">/raw</code> dumps, affinity synthesis, AI-assisted passes, and advanced prompting, use the{" "}
+            <Link className="font-semibold underline-offset-4 hover:underline" href="/discovery">
+              Discovery &amp; Synthesis week
+            </Link>
+            —designed to run alongside this vault plan.
+          </p>
         </div>
       </div>
 
