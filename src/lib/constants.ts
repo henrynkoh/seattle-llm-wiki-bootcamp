@@ -12,6 +12,8 @@ export const GRAPHIFY_REPO = "https://github.com/safishamsi/graphify";
 
 export const GRAPHIFY_SITE = "https://graphify.net/";
 
+export const GITHUB_REPO_URL = "https://github.com/henrynkoh/seattle-llm-wiki-bootcamp";
+
 export const NAV = [
   { href: "/", label: "Overview" },
   { href: "/curriculum", label: "7-Day Curriculum" },
