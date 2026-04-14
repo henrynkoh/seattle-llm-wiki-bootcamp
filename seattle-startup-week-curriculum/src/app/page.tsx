@@ -1,42 +1,27 @@
 import Link from "next/link";
 import {
-  cohortProfile,
-  deliveryPrinciples,
-  weekCurriculum,
-} from "@/lib/curriculum";
+  introSections,
+  practicalSections,
+  quickCommands,
+  quickShortcuts,
+} from "@/lib/cheatsheet";
 
 export default function Home() {
   const sections = [
-    { id: "overview", label: "Program Overview" },
-    { id: "segments", label: "Startup Segments" },
-    { id: "principles", label: "Delivery Principles" },
-    { id: "curriculum", label: "Weekly Curriculum" },
-    { id: "features", label: "Features & Functions" },
-    { id: "next-steps", label: "Next Steps" },
+    { id: "overview", label: "치트시트 개요" },
+    ...introSections.map((section) => ({
+      id: section.id,
+      label: section.title,
+    })),
+    ...practicalSections.map((section) => ({
+      id: section.id,
+      label: section.title,
+    })),
+    { id: "quick-reference", label: "한눈에 보기" },
+    { id: "series-note", label: "시리즈 안내" },
   ];
 
-  const featureCards = [
-    {
-      title: "Interactive day routing",
-      description:
-        "Every day has a dedicated page with objectives, outputs, and session blocks.",
-    },
-    {
-      title: "Facilitator-ready structure",
-      description:
-        "The curriculum is organized for immediate workshop delivery with measurable outcomes.",
-    },
-    {
-      title: "Marketing and ops bundle",
-      description:
-        "Includes quickstarter, manual, tutorial, and platform-specific promotion assets.",
-    },
-    {
-      title: "Modern static performance",
-      description:
-        "Pages are statically generated for fast load and reliable sharing.",
-    },
-  ];
+  const allSections = [...introSections, ...practicalSections];
 
   return (
     <>
@@ -67,148 +52,121 @@ export default function Home() {
             className="scroll-mt-24 overflow-hidden rounded-3xl border border-indigo-200 bg-gradient-to-br from-indigo-600 via-fuchsia-500 to-cyan-500 p-8 text-white shadow-xl"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-100">
-              Seattle Startup Cohort Program
+              Claude Code 입문 + 실전 통합
             </p>
             <h1 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
-              Modern AI Curriculum Landing Page
+              Claude Code 200% 활용 치트시트
             </h1>
             <p className="mt-4 max-w-3xl text-base text-indigo-50 md:text-lg">
-              A visual, interactive, and practical one-week curriculum experience
-              designed for selected startup teams in the Greater Seattle area.
+              초기 설정, 컨텍스트 관리, Plan Mode, 슬래시 명령어, 실전 워크플로우,
+              WAT 프레임워크까지 한 페이지에서 빠르게 확인할 수 있도록 통합
+              정리했습니다.
             </p>
 
-            <div className="mt-6 grid gap-3 text-sm md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-6 grid gap-3 text-sm md:grid-cols-2 xl:grid-cols-3">
               <div className="rounded-xl bg-white/15 p-4">
-                <p className="text-indigo-100">Cohort</p>
-                <p className="mt-1 font-semibold">{cohortProfile.name}</p>
+                <p className="text-indigo-100">핵심 흐름</p>
+                <p className="mt-1 font-semibold">Plan → Review → Execute</p>
               </div>
               <div className="rounded-xl bg-white/15 p-4">
-                <p className="text-indigo-100">Location</p>
-                <p className="mt-1 font-semibold">{cohortProfile.location}</p>
+                <p className="text-indigo-100">컨텍스트 원칙</p>
+                <p className="mt-1 font-semibold">한 세션 = 한 피처</p>
               </div>
               <div className="rounded-xl bg-white/15 p-4">
-                <p className="text-indigo-100">Duration</p>
-                <p className="mt-1 font-semibold">{cohortProfile.duration}</p>
-              </div>
-              <div className="rounded-xl bg-white/15 p-4">
-                <p className="text-indigo-100">Participants</p>
-                <p className="mt-1 font-semibold">
-                  {cohortProfile.participantCount}
-                </p>
+                <p className="text-indigo-100">자동화 관점</p>
+                <p className="mt-1 font-semibold">Workflow + Agents + Tools</p>
               </div>
             </div>
           </section>
 
-          <section
-            id="segments"
-            className="scroll-mt-24 rounded-2xl border border-emerald-200 bg-white p-8 shadow-sm"
-          >
-            <h2 className="text-2xl font-semibold text-zinc-900">
-              Target Startup Segments
-            </h2>
-            <ul className="mt-4 grid gap-3 md:grid-cols-2">
-              {cohortProfile.targetSegments.map((segment) => (
-                <li
-                  key={segment}
-                  className="rounded-lg border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-900 transition hover:scale-[1.01]"
-                >
-                  {segment}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section
-            id="principles"
-            className="scroll-mt-24 rounded-2xl border border-cyan-200 bg-white p-8 shadow-sm"
-          >
-            <h2 className="text-2xl font-semibold text-zinc-900">
-              Delivery Principles
-            </h2>
-            <ul className="mt-4 grid gap-3">
-              {deliveryPrinciples.map((principle) => (
-                <li
-                  key={principle}
-                  className="rounded-lg border border-cyan-100 bg-cyan-50 px-4 py-3 text-sm text-cyan-950"
-                >
-                  {principle}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section
-            id="curriculum"
-            className="scroll-mt-24 rounded-2xl border border-violet-200 bg-white p-8 shadow-sm"
-          >
-            <div className="flex flex-wrap items-end justify-between gap-3">
-              <h2 className="text-2xl font-semibold text-zinc-900">
-                Weekly Curriculum
-              </h2>
-              <p className="text-sm text-zinc-600">
-                Click each card to open daily detailed agenda
+          {allSections.map((section, idx) => (
+            <section
+              key={section.id}
+              id={section.id}
+              className="scroll-mt-24 rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
+                {section.subtitle}
               </p>
-            </div>
-            <div className="mt-6 grid gap-4 xl:grid-cols-2">
-              {weekCurriculum.map((dayPlan) => (
-                <article
-                  key={dayPlan.slug}
-                  className="group rounded-xl border border-violet-100 bg-gradient-to-br from-violet-50 to-indigo-50 p-5 transition hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">
-                    Day {dayPlan.day}
-                  </p>
-                  <h3 className="mt-1 text-lg font-semibold text-zinc-900">
-                    {dayPlan.focus}
-                  </h3>
-                  <p className="mt-2 text-sm text-zinc-700">
-                    {dayPlan.startupScenario}
-                  </p>
-                  <Link
-                    href={`/days/${dayPlan.slug}`}
-                    className="mt-4 inline-flex items-center rounded-md bg-violet-700 px-3 py-2 text-sm font-medium text-white transition group-hover:bg-violet-600"
+              <h2 className="mt-2 text-2xl font-semibold text-zinc-900">
+                {section.title}
+              </h2>
+              <ul className="mt-4 grid gap-3">
+                {section.points.map((point) => (
+                  <li
+                    key={point}
+                    className={`rounded-lg px-4 py-3 text-sm ${
+                      idx % 2 === 0
+                        ? "border border-violet-100 bg-violet-50 text-violet-950"
+                        : "border border-cyan-100 bg-cyan-50 text-cyan-950"
+                    }`}
                   >
-                    View detailed agenda
-                  </Link>
-                </article>
-              ))}
-            </div>
-          </section>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
 
           <section
-            id="features"
+            id="quick-reference"
             className="scroll-mt-24 rounded-2xl border border-amber-200 bg-white p-8 shadow-sm"
           >
             <h2 className="text-2xl font-semibold text-zinc-900">
-              Features & Functions
+              📋 한눈에 보기
             </h2>
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              {featureCards.map((feature) => (
-                <article
-                  key={feature.title}
-                  className="rounded-xl border border-amber-100 bg-gradient-to-br from-amber-50 to-orange-50 p-5"
-                >
-                  <h3 className="text-lg font-semibold text-zinc-900">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-zinc-700">
-                    {feature.description}
-                  </p>
-                </article>
-              ))}
+            <div className="mt-5 grid gap-5 md:grid-cols-2">
+              <article className="rounded-xl border border-amber-100 bg-amber-50 p-5">
+                <h3 className="text-lg font-semibold text-zinc-900">
+                  단축키 Quick Reference
+                </h3>
+                <ul className="mt-3 space-y-2 text-sm text-zinc-800">
+                  {quickShortcuts.map((item) => (
+                    <li key={item}>- {item}</li>
+                  ))}
+                </ul>
+              </article>
+              <article className="rounded-xl border border-emerald-100 bg-emerald-50 p-5">
+                <h3 className="text-lg font-semibold text-zinc-900">
+                  명령어 Quick Reference
+                </h3>
+                <ul className="mt-3 space-y-2 text-sm text-zinc-800">
+                  {quickCommands.map((item) => (
+                    <li key={item}>- {item}</li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+            <div className="mt-5 rounded-xl border border-zinc-200 bg-zinc-50 p-4 text-sm text-zinc-700">
+              팁: 대규모 작업은 Plan Mode로 합의 후 실행하고, 에러 로그는 요약하지
+              말고 원문 그대로 전달하세요.
             </div>
           </section>
 
           <section
-            id="next-steps"
-            className="scroll-mt-24 rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm"
+            id="series-note"
+            className="scroll-mt-24 rounded-2xl border border-fuchsia-200 bg-gradient-to-r from-fuchsia-50 to-indigo-50 p-8 shadow-sm"
           >
-            <h2 className="text-2xl font-semibold text-zinc-900">Next Steps</h2>
+            <h2 className="text-2xl font-semibold text-zinc-900">🎬 시리즈 안내</h2>
             <p className="mt-3 text-zinc-700">
-              Use the curriculum day pages for weekly delivery, then publish the
-              included marketing bundle for startup recruitment and program
-              promotion.
+              이 자료는 입문 + 실전 워크플로우 내용을 통합한 버전입니다. 다음
+              확장판에서는 TDD 기반 실무 자동화, 권한 전략, 병렬 에이전트 운영
+              사례를 더 깊게 다룰 수 있습니다.
             </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                href="/days/foundation-and-setup"
+                className="rounded-lg bg-violet-700 px-4 py-2 text-sm font-medium text-white hover:bg-violet-600"
+              >
+                Day 상세 페이지 보기
+              </Link>
+              <Link
+                href="/"
+                className="rounded-lg border border-zinc-300 bg-white px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
+              >
+                페이지 상단으로 이동
+              </Link>
+            </div>
           </section>
         </div>
       </main>

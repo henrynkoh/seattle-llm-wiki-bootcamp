@@ -1,49 +1,38 @@
-# Quickstarter
+# Quickstarter (빠른 시작)
 
-## 1) Install and run
+## 1) 설치 및 실행
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+브라우저에서 `http://localhost:3000` 을 엽니다.
 
-## 2) Validate build quality
+## 2) 빌드 검증
 
 ```bash
 npm run lint
 npm run build
 ```
 
-## 3) Edit curriculum content
+## 3) 콘텐츠 수정 위치
 
-Main file:
-- `src/lib/curriculum.ts`
+| 수정 대상 | 파일 |
+| --- | --- |
+| 홈 **치트시트** 본문 | `src/lib/cheatsheet.ts` |
+| 홈 **레이아웃·사이드바** | `src/app/page.tsx` |
+| **7일 커리큘럼** | `src/lib/curriculum.ts` |
 
-Edit:
-- cohort metadata
-- daily focus and sessions
-- outcomes and homework
+## 4) 페이지 확인
 
-## 4) Check page outputs
+- 랜딩(치트시트): `/`
+- 일별 일정: `/days/foundation-and-setup` 등 `curriculum.ts`의 `slug`와 동일한 경로
 
-- Home: `/`
-- Daily agendas: `/days/foundation-and-setup` (and other slugs)
+## 5) 배포
 
-## 5) Publish
+Vercel 등 Next.js 호환 호스트에 배포합니다.
 
-Deploy to Vercel or your preferred Next.js host.
+## 6) 홍보 카피
 
-## 6) Use promo content
-
-Use copy templates in `marketing/` for:
-- Facebook
-- Instagram
-- Threads
-- Blogger
-- Naver Blog
-- Tistory
-- WordPress
-- Newsletter
-- Email
+`marketing/` 폴더의 플랫폼별 템플릿을 복사해 사용합니다.

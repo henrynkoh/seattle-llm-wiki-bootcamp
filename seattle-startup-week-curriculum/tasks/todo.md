@@ -7,9 +7,9 @@
 - [x] Update metadata, base styling, and README documentation
 - [x] Add complete docs set: README, manual, tutorial, quickstarter
 - [x] Add full marketing/ad copy pack for all requested channels
+- [x] Sync README, MANUAL, TUTORIAL, QUICKSTART with merged cheat-sheet content
 
 ## Review
 
-This project now provides a complete and practical one-week program with realistic
-session outputs. Teams can use the weekly overview for planning and open each day
-for step-by-step execution details.
+The home page is a unified Korean Claude Code cheat sheet; weekly day pages remain
+for cohort delivery. Documentation points editors to `cheatsheet.ts` vs `curriculum.ts`.
