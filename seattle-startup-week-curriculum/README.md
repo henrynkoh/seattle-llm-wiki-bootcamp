@@ -47,3 +47,13 @@ npm run build
 ## 배포
 
 Vercel 등 Next.js 호환 호스에 배포하면 됩니다.
+
+### Vercel에서 이 서브앱만 배포할 때 (중요)
+
+이 저장소 루트에는 **별도의 Next.js 앱**이 있고, 이 폴더(`seattle-startup-week-curriculum`)도 **또 하나의 Next.js 앱**입니다.
+
+Vercel 프로젝트 설정에서 **Root Directory**를 반드시 다음으로 지정하세요.
+
+`seattle-startup-week-curriculum`
+
+그렇지 않으면 루트의 `tsconfig`가 하위 앱 파일까지 검사하면서 `@/lib/curriculum` 경로가 어긋나 빌드가 실패할 수 있습니다. (루트 저장소 쪽에서는 해당 폴더를 타입체크에서 제외하도록 맞춰 두었습니다.)
