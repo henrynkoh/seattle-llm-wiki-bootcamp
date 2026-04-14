@@ -4,6 +4,8 @@ Next.js microsite for the **1-Week LLM Wiki: AI Second Brain Bootcamp** — a fa
 
 **Live site:** [seattle-llm-wiki-bootcamp-cs.vercel.app](https://seattle-llm-wiki-bootcamp-cs.vercel.app)
 
+**Visual repo hub (GitHub):** This repository includes a static **[`docs/index.html`](./docs/index.html)** landing page — left sidebar navigation, colorful feature cards for every major area, and a **GitHub** button fixed at the bottom-right. To host it on **GitHub Pages**, use **Settings → Pages → Build and deployment → Deploy from a branch**, branch **`main`**, folder **`/docs`**. Your site will be available at `https://<user>.github.io/seattle-llm-wiki-bootcamp/` (for example `https://henrynkoh.github.io/seattle-llm-wiki-bootcamp/`). You can also open `docs/index.html` directly in a browser from a local clone.
+
 ## What’s on the site
 
 | Route | Contents |
@@ -24,7 +26,17 @@ Next.js microsite for the **1-Week LLM Wiki: AI Second Brain Bootcamp** — a fa
 | [docs/TUTORIAL.md](./docs/TUTORIAL.md) | Step-by-step first content edit |
 | [marketing/](./marketing/) | Copy for social, blogs, newsletter, email (platform-specific files) |
 
-> **Note:** Older experimental folders (`seattle-startup-week-curriculum/`, `harness-seattle-curriculum/`) may contain drafts. The **canonical** docs for this app live under **`docs/`** and **`marketing/`** at the repository root.
+## Interactive Lab app (optional second Next.js project)
+
+| Doc | Description |
+| --- | --- |
+| [seattle-llm-wiki-bootcamp-lab/README.md](./seattle-llm-wiki-bootcamp-lab/README.md) | Lab overview — day-by-day UI + playbooks |
+| [seattle-llm-wiki-bootcamp-lab/docs/QUICKSTART.md](./seattle-llm-wiki-bootcamp-lab/docs/QUICKSTART.md) | Run the lab locally (separate `npm install`) |
+| [seattle-llm-wiki-bootcamp-lab/docs/MANUAL.md](./seattle-llm-wiki-bootcamp-lab/docs/MANUAL.md) | Lab routes, checklists, deployment note |
+| [seattle-llm-wiki-bootcamp-lab/docs/TUTORIAL.md](./seattle-llm-wiki-bootcamp-lab/docs/TUTORIAL.md) | Edit `days.ts` / `playbooks.ts` |
+| [seattle-llm-wiki-bootcamp-lab/marketing/](./seattle-llm-wiki-bootcamp-lab/marketing/) | Promotional copy for the **Lab** companion (parallel to root `marketing/`) |
+
+> **Note:** Older experimental folders (`seattle-startup-week-curriculum/`, `harness-seattle-curriculum/`) may contain drafts. The **canonical** docs for the **main** app live under **`docs/`** and **`marketing/`** at the repository root. The **Lab** app has its own **`seattle-llm-wiki-bootcamp-lab/docs/`** and **`marketing/`** folders.
 
 ## Quick start
 

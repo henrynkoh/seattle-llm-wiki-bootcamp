@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Seattle LLM Wiki Bootcamp — visual hub for the open-source repo: live site, lab app, docs, and marketing copy."
+    />
+    <title>Seattle LLM Wiki Bootcamp · Repo hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/landing.css" />
+  </head>
+  <body>
+    <button type="button" class="sidebar-toggle" aria-label="Open navigation menu" id="sidebar-toggle">☰</button>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" aria-hidden="true"></div>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar" aria-label="Section navigation">
+        <div class="sidebar__brand">
+          <span>Repository</span>
+          Seattle LLM Wiki Bootcamp
+        </div>
+        <nav class="nav-scroll" aria-label="Page sections">
+          <div class="nav-label">Jump to</div>
+          <ul class="nav-list">
+            <li><a href="#hero" class="is-active">Overview</a></li>
+            <li><a href="#live-site">Live site</a></li>
+            <li><a href="#features">Features &amp; routes</a></li>
+            <li><a href="#lab">Bootcamp Lab app</a></li>
+            <li><a href="#docs">Documentation</a></li>
+            <li><a href="#marketing">Marketing copy</a></li>
+            <li><a href="#workshop">Workshop video</a></li>
+            <li><a href="#repo">Clone &amp; run</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar__meta">
+          Static hub · Works with
+          <a href="https://docs.github.com/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site" target="_blank" rel="noopener">GitHub Pages</a>
+          from <code>/docs</code>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="section hero" id="hero">
+          <div class="hero__inner">
+            <h1>Your visual map of the Seattle LLM Wiki Bootcamp repo</h1>
+            <p>
+              One scrollable hub: the <strong>live microsite</strong>, the optional <strong>interactive Lab</strong>,
+              <strong>documentation</strong>, and <strong>channel-ready marketing</strong> — aligned to the Karpathy-style
+              workflow: raw → ingest → wiki → query → lint.
+            </p>
+            <div class="hero__badges">
+              <span class="badge badge--violet">Greater Seattle cohorts</span>
+              <span class="badge badge--cyan">Obsidian-native</span>
+              <span class="badge badge--pink">Open source</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="live-site">
+          <p class="section__title">Production</p>
+          <h2>Live site</h2>
+          <p class="lead">The public Next.js app — curriculum, discovery track, logistics, facilitators, and the Claude Code cheat sheet.</p>
+          <div class="card-grid">
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">🚀</div>
+              <h3>Vercel deployment</h3>
+              <p>Primary URL for cohorts and facilitators. Bookmark this for slides and homework.</p>
+              <a href="https://seattle-llm-wiki-bootcamp-cs.vercel.app" target="_blank" rel="noopener noreferrer">Open live site →</a>
+            </article>
+            <article class="card">
+              <div class="card__icon" aria-hidden="true">📋</div>
+              <h3>Quick paths</h3>
+              <p>Curriculum, Discovery &amp; Synthesis, Graphify, logistics, and runbook — all linked from the home page.</p>
+              <a href="https://seattle-llm-wiki-bootcamp-cs.vercel.app/curriculum" target="_blank" rel="noopener noreferrer">7-day curriculum →</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="features">
+          <p class="section__title">Main app</p>
+          <h2>Features &amp; routes</h2>
+          <p class="lead">What ships in the root Next.js application — each route is static and ready for Vercel.</p>
+          <div class="card-grid">
+            <article class="card">
+              <div class="card__icon">🏠</div>
+              <h3>/</h3>
+              <p>Landing hub, Claude Code 치트시트 (Korean), site map, and feature grid.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon">📅</div>
+              <h3>/curriculum</h3>
+              <p>Seven day cards: vault, ingest, graphs, queries, lint, demo day — vault layout and plugin list.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon">🔬</div>
+              <h3>/discovery</h3>
+              <p>Parallel Discovery &amp; Synthesis week: /raw artifacts, affinity, AI-assisted synthesis.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon">🕸️</div>
+              <h3>/graphify</h3>
+              <p>Optional Graphify CLI track for graph generation and reports.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon">📦</div>
+              <h3>/logistics</h3>
+              <p>Prerequisites, venues, cohort selection, recordings policy.</p>
+            </article>
+            <article class="card">
+              <div class="card__icon">🎤</div>
+              <h3>/facilitators</h3>
+              <p>Runbook, checklists, and production guidance for the room.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="lab">
+          <p class="section__title">Companion app</p>
+          <h2>Bootcamp Lab (interactive)</h2>
+          <p class="lead">
+            A second Next.js package in the repo: day-by-day steps with optional browser checklists, plus Obsidian playbooks
+            (Dataview, DataviewJS, Templater, Linter, sync, backup, and more).
+          </p>
+          <div class="card-grid">
+            <article class="card">
+              <div class="card__icon">📆</div>
+              <h3>Day labs</h3>
+              <p>Routes <code>/day/1</code> … <code>/day/7</code> with ordered steps and homework.</p>
+              <a href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/tree/main/seattle-llm-wiki-bootcamp-lab" target="_blank" rel="noopener noreferrer">Browse Lab folder →</a>
+            </article>
+            <article class="card">
+              <div class="card__icon">📚</div>
+              <h3>Playbooks</h3>
+              <p>Dataview queries, dashboards, themes, mobile capture, 3-2-1 backups — copy-paste friendly.</p>
+              <a href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/tree/main/seattle-llm-wiki-bootcamp-lab/src/lib" target="_blank" rel="noopener noreferrer">Source: days &amp; playbooks →</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="docs">
+          <p class="section__title">Guides</p>
+          <h2>Documentation</h2>
+          <p class="lead">Root repo docs for the main app; the Lab has its own <code>docs/</code> folder.</p>
+          <div class="link-row">
+            <a class="pill-link" href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/blob/main/docs/QUICKSTART.md" target="_blank" rel="noopener noreferrer">QUICKSTART.md</a>
+            <a class="pill-link" href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/blob/main/docs/MANUAL.md" target="_blank" rel="noopener noreferrer">MANUAL.md</a>
+            <a class="pill-link" href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/blob/main/docs/TUTORIAL.md" target="_blank" rel="noopener noreferrer">TUTORIAL.md</a>
+            <a class="pill-link" href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/blob/main/README.md" target="_blank" rel="noopener noreferrer">README.md</a>
+          </div>
+          <p class="lead" style="margin-top: 1.25rem">Lab-specific:</p>
+          <div class="link-row">
+            <a
+              class="pill-link"
+              href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/blob/main/seattle-llm-wiki-bootcamp-lab/docs/QUICKSTART.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lab QUICKSTART</a
+            >
+            <a
+              class="pill-link"
+              href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/blob/main/seattle-llm-wiki-bootcamp-lab/docs/MANUAL.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lab MANUAL</a
+            >
+            <a
+              class="pill-link"
+              href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/blob/main/seattle-llm-wiki-bootcamp-lab/docs/TUTORIAL.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lab TUTORIAL</a
+            >
+          </div>
+        </section>
+
+        <section class="section" id="marketing">
+          <p class="section__title">Outreach</p>
+          <h2>Marketing copy</h2>
+          <p class="lead">Platform-ready drafts (Facebook, Instagram, Threads, blogs, newsletter, email) — replace placeholders before publishing.</p>
+          <div class="link-row">
+            <a class="pill-link" href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/tree/main/marketing" target="_blank" rel="noopener noreferrer">Root marketing/</a>
+            <a
+              class="pill-link"
+              href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp/tree/main/seattle-llm-wiki-bootcamp-lab/marketing"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Lab marketing/</a
+            >
+          </div>
+        </section>
+
+        <section class="section" id="workshop">
+          <p class="section__title">Source</p>
+          <h2>Workshop video</h2>
+          <p class="lead">Concept alignment with the Karpathy LLM Wiki walkthrough.</p>
+          <div class="card-grid">
+            <article class="card">
+              <div class="card__icon">▶️</div>
+              <h3>YouTube</h3>
+              <p>Timestamps on the site are orientation — video edits may shift timing.</p>
+              <a href="https://www.youtube.com/watch?v=cNlvrU-KcRg" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="repo">
+          <p class="section__title">Developers</p>
+          <h2>Clone &amp; run</h2>
+          <p class="lead">Main app at repo root; Lab in <code>seattle-llm-wiki-bootcamp-lab/</code>. See QUICKSTART for ports and build.</p>
+          <div class="footer-strip">
+            <strong style="color: #e4e4e7">Tip:</strong> Enable
+            <a href="https://docs.github.com/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site" target="_blank" rel="noopener" style="color: #67e8f9">GitHub Pages</a>
+            with source <strong>Deploy from a branch</strong> → folder <code>/docs</code> to host this page at
+            <code>https://&lt;user&gt;.github.io/seattle-llm-wiki-bootcamp/</code>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <a
+      class="gh-fab"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://github.com/henrynkoh/seattle-llm-wiki-bootcamp"
+      aria-label="View repository on GitHub"
+    >
+      <svg viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.304c4.125 0 8.33.571 12.213 1.304 9.301-6.356 13.426-5.052 13.426-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+        />
+      </svg>
+      GitHub
+    </a>
+
+    <script src="assets/landing.js" defer></script>
+  </body>
+</html>

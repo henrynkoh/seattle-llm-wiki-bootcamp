@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "harness-seattle-curriculum/**",
     "seattle-startup-week-curriculum/node_modules/**",
+    "seattle-llm-wiki-bootcamp-lab/node_modules/**",
   ]),
 ]);
 

@@ -26,6 +26,8 @@ This manual describes **who uses this repository**, **what each surface does**, 
 
 All routes are **static**; no database or server secrets required for hosting.
 
+**GitHub visual hub:** [`docs/index.html`](./index.html) is a static landing page (sidebar navigation, feature cards, GitHub link) meant for **GitHub Pages** when the publishing source is the `/docs` folder. A [`.nojekyll`](./.nojekyll) file disables Jekyll so assets load reliably.
+
 ## 4. Editorial rules
 
 1. **Stable URLs** — Do not rename routes without redirects; cohort materials bookmark them.
@@ -54,7 +56,18 @@ All routes are **static**; no database or server secrets required for hosting.
 | [README.md](../README.md) | Project overview and deploy button |
 | `marketing/` | Channel-specific promotional copy |
 
-## 8. Support and source
+## 8. Bootcamp Lab (optional companion app)
+
+The repository also contains **`seattle-llm-wiki-bootcamp-lab/`**, a second Next.js application:
+
+- **Routes:** `/`, `/week`, `/day/[1-7]`, `/playbooks`, `/playbooks/[slug]`
+- **Content:** `src/lib/days.ts`, `src/lib/playbooks.ts`
+- **Purpose:** facilitator-friendly **step-by-step** UI; does **not** replace the public site or the on-disk Obsidian vault
+
+**Docs:** [seattle-llm-wiki-bootcamp-lab/docs/MANUAL.md](../seattle-llm-wiki-bootcamp-lab/docs/MANUAL.md)  
+**Marketing:** [seattle-llm-wiki-bootcamp-lab/marketing/](../seattle-llm-wiki-bootcamp-lab/marketing/)
+
+## 9. Support and source
 
 - **Upstream concept:** Karpathy LLM Wiki workflow (video linked on site).
 - **Repo:** [github.com/henrynkoh/seattle-llm-wiki-bootcamp](https://github.com/henrynkoh/seattle-llm-wiki-bootcamp)

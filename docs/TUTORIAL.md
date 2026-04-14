@@ -78,6 +78,12 @@ Open [http://localhost:3000](http://localhost:3000) again and spot-check `/curri
 
 ---
 
+## Optional — Edit the Bootcamp Lab app
+
+The folder **`seattle-llm-wiki-bootcamp-lab/`** is a **separate** Next.js app (its own `npm install`). To change **day steps** or **playbooks**, edit `seattle-llm-wiki-bootcamp-lab/src/lib/days.ts` or `playbooks.ts`. Follow the dedicated walkthrough: [seattle-llm-wiki-bootcamp-lab/docs/TUTORIAL.md](../seattle-llm-wiki-bootcamp-lab/docs/TUTORIAL.md).
+
+---
+
 ## Troubleshooting
 
 | Issue | What to try |

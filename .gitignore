@@ -2,6 +2,11 @@
 
 # dependencies
 /node_modules
+seattle-llm-wiki-bootcamp-lab/node_modules/
+seattle-llm-wiki-bootcamp-lab/.next/
+
+# large / experimental local trees (do not ship to GitHub)
+harness-seattle-curriculum/
 /.pnp
 .pnp.*
 .yarn/*

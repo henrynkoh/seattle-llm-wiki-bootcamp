@@ -7,7 +7,7 @@ Platform-specific drafts live in this folder. Replace bracketed placeholders (da
 | [facebook.md](./facebook.md) | Facebook post + optional ad variants |
 | [instagram.md](./instagram.md) | Instagram caption + story bullets |
 | [threads.md](./threads.md) | Threads (Meta) — short thread |
-| [treads.md](./treads.md) | Typo alias → see `threads.md` |
+| [treads.md](./treads.md) | Ultra-short micro-thread lines (cross-post / Bluesky-style chains) |
 | [blogger.md](./blogger.md) | Google Blogger post |
 | [naver-blog.md](./naver-blog.md) | 네이버 블로그 (Korean) |
 | [tistory.md](./tistory.md) | Tistory (Korean) |
