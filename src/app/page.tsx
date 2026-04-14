@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FeatureExpandableGrid } from "@/components/feature-expandable-grid";
 import { GitHubFab } from "@/components/github-fab";
 import { LandingLayout } from "@/components/landing-navigation";
 import {
@@ -169,20 +170,7 @@ export default function Home() {
                 below.
               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {landingFeatures.map((f) => (
-                <article
-                  key={f.title}
-                  className="rounded-2xl border border-zinc-200/90 bg-gradient-to-br from-white to-zinc-50 p-6 shadow-sm transition hover:border-indigo-300/60 hover:shadow-md dark:border-zinc-800 dark:from-zinc-900/80 dark:to-zinc-950 dark:hover:border-indigo-500/40"
-                >
-                  <p className="text-2xl" aria-hidden>
-                    {f.icon}
-                  </p>
-                  <h3 className="mt-3 text-lg font-semibold text-zinc-900 dark:text-white">{f.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">{f.description}</p>
-                </article>
-              ))}
-            </div>
+            <FeatureExpandableGrid features={landingFeatures} />
           </section>
 
           {/* Claude cheat sheet intro */}

@@ -34,10 +34,14 @@ export function LandingLayout({ children }: { children: ReactNode }) {
         ticking.current = false;
       });
     };
-    updateActive();
+    let initialRaf = 0;
+    initialRaf = requestAnimationFrame(() => {
+      updateActive();
+    });
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll, { passive: true });
     return () => {
+      cancelAnimationFrame(initialRaf);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };
